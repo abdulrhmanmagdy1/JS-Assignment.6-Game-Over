@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Games Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-gamepad me-2"></i>
+                Free Games Store
+            </a>
+        </div>
+    </nav>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner-border text-primary mb-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <h5>Loading Games...</h5>
+        </div>
+    </div>
+
+    <!-- Games Section -->
+    <section id="games-section" class="container-fluid py-5" style="display: none;">
+        <div class="container">
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold text-white mb-3">
+                    <i class="fas fa-trophy text-warning me-3"></i>
+                    Best Free Games
+                </h1>
+                <p class="lead text-light">Discover amazing collection of free games</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="category-filter text-center">
+                        <button class="btn btn-category active" data-category="">
+                            <i class="fas fa-th-large me-2"></i>
+                            All Games
+                        </button>
+                        <button class="btn btn-category" data-category="shooter">
+                            <i class="fas fa-crosshairs me-2"></i>
+                            Shooter
+                        </button>
+                        <button class="btn btn-category" data-category="mmorpg">
+                            <i class="fas fa-users me-2"></i>
+                            MMORPG
+                        </button>
+                        <button class="btn btn-category" data-category="strategy">
+                            <i class="fas fa-chess me-2"></i>
+                            Strategy
+                        </button>
+                        <button class="btn btn-category" data-category="racing">
+                            <i class="fas fa-car me-2"></i>
+                            Racing
+                        </button>
+                        <button class="btn btn-category" data-category="sports">
+                            <i class="fas fa-football-ball me-2"></i>
+                            Sports
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Container -->
+            <div id="games-container" class="row">
+                <!-- Games will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Details Section -->
+    <section id="details-section" class="container-fluid py-5" style="display: none;">
+        <div class="container">
+            <!-- Back Button -->
+            <div class="mb-4">
+                <button id="back-btn" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-arrow-left me-2"></i>
+                    Back to Games
+                </button>
+            </div>
+            
+            <!-- Game Details Container -->
+            <div id="game-details-container">
+                <!-- Game details will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
